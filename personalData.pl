@@ -50,7 +50,7 @@ close(DATAFILE);
 
 # Creates a HTML file and includes inputted content 
 print "content-type: text/html \n\n"; #my header
-sysopen (HTML, 'index.html', O_RDWR|O_EXCL|O_CREAT, 0755); # funtion creates page with required resources and mode
+sysopen (HTML, 'index.html', O_RDWR|O_TRUNC|O_CREAT, 0755); # funtion creates page with required resources and mode
 printf HTML "<html>\n"; # prints out HTML markup tags
 printf HTML "<head>\n"; 
 printf HTML "<title>$lastName Home Page</title>"; 
